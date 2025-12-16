@@ -57,55 +57,67 @@
                     </div>
                 
                 <div class="contact-form-container">
-                    <div class="contact-form">
-                        <h3>Start Your Project</h3>
-                        <form id="contactForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Full Name *</label>
-                                    <input type="text" id="name" class="form-control" required>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="email">Email Address *</label>
-                                    <input type="email" id="email" class="form-control" required>
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="company">Company</label>
-                                    <input type="text" id="company" class="form-control">
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" class="form-control">
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="service">Service Interested In</label>
-                                <select id="service" class="form-control">
-                                    <option value="">Select a service</option>
-                                    <option value="web-design">Luxury Web Design</option>
-                                    <option value="branding">Brand Development</option>
-                                    <option value="marketing">Digital Marketing</option>
-                                    <option value="content">Content Creation</option>
-                                    <option value="multiple">Multiple Services</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Your Message *</label>
-                                <textarea id="message" class="form-control" required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+  <div class="contact-form">
+    <h3>Start Your Project</h3>
+
+    <form action="https://formsubmit.co/geah2727@gmail.com" method="POST" id="contactForm">
+
+      <!-- Optional FormSubmit settings -->
+      <input type="hidden" name="_subject" value="New Project Inquiry">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <!-- Redirect after submit -->
+      <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> -->
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" class="form-control">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="service">Service Interested In</label>
+        <select id="service" name="service" class="form-control">
+          <option value="">Select a service</option>
+          <option value="Luxury Web Design">Luxury Web Design</option>
+          <option value="Brand Development">Brand Development</option>
+          <option value="Digital Marketing">Digital Marketing</option>
+          <option value="Content Creation">Content Creation</option>
+          <option value="Multiple Services">Multiple Services</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Message *</label>
+        <textarea id="message" name="message" class="form-control" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-full">
+        Send Message
+      </button>
+
+    </form>
+  </div>
+</div>
+
         </div>
     </section>
 
