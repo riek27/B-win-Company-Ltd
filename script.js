@@ -1,183 +1,318 @@
-// Navigation
-const navbar = document.getElementById('navbar');
-const navLinks = document.querySelectorAll('.nav-link');
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navLinksContainer = document.getElementById('navLinks');
+// B-win Construction & General Supply Company
+// Main JavaScript File
 
-// Scroll effect on navbar
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-// Mobile menu toggle
-if (mobileMenuBtn) {
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinksContainer.classList.toggle('active');
-        mobileMenuBtn.innerHTML = navLinksContainer.classList.contains('active') ? 
-            '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-    });
-}
-
-// Close mobile menu when clicking on a link
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        if (navLinksContainer.classList.contains('active')) {
-            navLinksContainer.classList.remove('active');
-            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-        }
-    });
-});
-
-// Set active navigation link based on current page
-function setActiveNavLink() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const navLinks = document.querySelectorAll('.nav-link');
     
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.querySelector('ul').classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            document.body.style.overflow = mainNav.querySelector('ul').classList.contains('active') ? 'hidden' : '';
+        });
+    }
+    
+    // Close mobile menu when clicking overlay
+    if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', () => {
+            mainNav.querySelector('ul').classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+    
+    // Close mobile menu when clicking a link
     navLinks.forEach(link => {
-        const linkHref = link.getAttribute('href');
-        if (linkHref === currentPage) {
-            link.classList.add('active');
+        link.addEventListener('click', () => {
+            mainNav.querySelector('ul').classList.remove('active');
+            if (mobileOverlay) mobileOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTop.classList.add('active');
         } else {
-            link.classList.remove('active');
+            backToTop.classList.remove('active');
         }
-    });
-}
-
-// Homepage Slideshow
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.hero-dot');
-const prevArrow = document.querySelector('.prev-arrow');
-const nextArrow = document.querySelector('.next-arrow');
-let currentSlide = 0;
-let slideInterval;
-
-// Function to show a specific slide
-function showSlide(index) {
-    // Reset all slides
-    slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
-    
-    // Set new slide
-    currentSlide = index;
-    if (currentSlide >= slides.length) currentSlide = 0;
-    if (currentSlide < 0) currentSlide = slides.length - 1;
-    
-    slides[currentSlide].classList.add('active');
-    if (dots.length > 0) {
-        dots[currentSlide].classList.add('active');
-    }
-}
-
-// Next slide function
-function nextSlide() {
-    showSlide(currentSlide + 1);
-}
-
-// Previous slide function
-function prevSlide() {
-    showSlide(currentSlide - 1);
-}
-
-// Start slideshow
-function startSlideShow() {
-    if (slides.length > 0) {
-        slideInterval = setInterval(nextSlide, 4000);
-    }
-}
-
-// Event listeners for arrows
-if (nextArrow) {
-    nextArrow.addEventListener('click', () => {
-        clearInterval(slideInterval);
-        nextSlide();
-        startSlideShow();
-    });
-}
-
-if (prevArrow) {
-    prevArrow.addEventListener('click', () => {
-        clearInterval(slideInterval);
-        prevSlide();
-        startSlideShow();
-    });
-}
-
-// Event listeners for dots
-dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-        clearInterval(slideInterval);
-        const slideIndex = parseInt(dot.getAttribute('data-slide'));
-        showSlide(slideIndex);
-        startSlideShow();
-    });
-});
-
-// Service card animation on scroll
-const serviceCards = document.querySelectorAll('.service-card');
-
-function checkScroll() {
-    serviceCards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
         
-        if (cardTop < windowHeight - 100) {
-            card.classList.add('visible');
+        // Header scroll effect
+        const header = document.querySelector('header');
+        if (window.pageYOffset > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
         }
     });
-}
-
-// FAQ functionality
-const faqItems = document.querySelectorAll('.faq-item');
-
-faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
     
-    question.addEventListener('click', () => {
-        // Close all other items
-        faqItems.forEach(otherItem => {
-            if (otherItem !== item) {
-                otherItem.classList.remove('active');
+    if (backToTop) {
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    // Fade In Animation on Scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const fadeInOnScroll = () => {
+        fadeElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementVisible = 150;
+            
+            if (elementTop < window.innerHeight - elementVisible) {
+                element.classList.add('visible');
             }
         });
-        
-        // Toggle current item
-        item.classList.toggle('active');
-    });
-});
-
-// Contact form submission
-const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // In a real application, you would send the form data to a server here
-        // For demonstration, we'll just show an alert
-        alert('Thank you for your message! We will get back to you soon.');
-        contactForm.reset();
-    });
-}
-
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    setActiveNavLink();
-    startSlideShow();
+    };
     
-    // Check scroll position for service cards
-    if (serviceCards.length > 0) {
-        window.addEventListener('scroll', checkScroll);
-        checkScroll(); // Check on initial load
+    window.addEventListener('scroll', fadeInOnScroll);
+    window.addEventListener('load', fadeInOnScroll);
+    
+    // Typewriter Effect for Home Page
+    const typewriterText = document.getElementById('typewriterText');
+    
+    if (typewriterText) {
+        const texts = [
+            "We design, build, and deliver high-quality residential, commercial, and infrastructure projects across Juba and beyond.",
+            "Trusted construction and civil engineering experts in South Sudan.",
+            "Building the future of South Sudan with quality and excellence."
+        ];
+        
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
+        
+        function typeWriter() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typewriterText.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+                typingSpeed = 50;
+            } else {
+                typewriterText.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+                typingSpeed = 100;
+            }
+            
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                typingSpeed = 1000; // Pause at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                typingSpeed = 500; // Pause before starting new text
+            }
+            
+            setTimeout(typeWriter, typingSpeed);
+        }
+        
+        // Start typewriter after page loads
+        setTimeout(typeWriter, 1000);
     }
     
-    // Add loading animation to page
-    document.body.classList.add('loaded');
-});
-
-// Add smooth page transitions
-window.addEventListener('beforeunload', () => {
-    document.body.classList.remove('loaded');
+    // Projects Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    if (filterBtns.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filterValue = btn.getAttribute('data-filter');
+                
+                // Filter projects
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.classList.remove('hidden');
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            card.classList.add('hidden');
+                        }, 300);
+                    }
+                });
+            });
+        });
+    }
+    
+    // Contact Form Submission
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const submitBtn = this.querySelector('.btn');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Show success message
+                alert('Thank you for your message! We will get back to you soon.');
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            }, 1500);
+        });
+    }
+    
+    // Counter Animation for Stats
+    const statNumbers = document.querySelectorAll('.about-stat-number');
+    
+    if (statNumbers.length > 0) {
+        const observerOptions = {
+            threshold: 0.5
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumber = entry.target;
+                    const targetValue = parseInt(statNumber.textContent);
+                    const duration = 2000; // 2 seconds
+                    const increment = targetValue / (duration / 16); // 60fps
+                    let currentValue = 0;
+                    
+                    const timer = setInterval(() => {
+                        currentValue += increment;
+                        if (currentValue >= targetValue) {
+                            statNumber.textContent = targetValue + '+';
+                            clearInterval(timer);
+                        } else {
+                            statNumber.textContent = Math.floor(currentValue) + '+';
+                        }
+                    }, 16);
+                    
+                    observer.unobserve(statNumber);
+                }
+            });
+        }, observerOptions);
+        
+        statNumbers.forEach(number => observer.observe(number));
+    }
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            if (href === '#') return;
+            
+            e.preventDefault();
+            const targetElement = document.querySelector(href);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Initialize tooltips
+    const tooltipElements = document.querySelectorAll('[data-tooltip]');
+    
+    tooltipElements.forEach(element => {
+        element.addEventListener('mouseenter', function() {
+            const tooltipText = this.getAttribute('data-tooltip');
+            const tooltip = document.createElement('div');
+            tooltip.className = 'tooltip';
+            tooltip.textContent = tooltipText;
+            document.body.appendChild(tooltip);
+            
+            const rect = this.getBoundingClientRect();
+            tooltip.style.left = `${rect.left + rect.width / 2}px`;
+            tooltip.style.top = `${rect.top - tooltip.offsetHeight - 10}px`;
+            tooltip.style.transform = 'translateX(-50%)';
+        });
+        
+        element.addEventListener('mouseleave', function() {
+            const tooltip = document.querySelector('.tooltip');
+            if (tooltip) {
+                tooltip.remove();
+            }
+        });
+    });
+    
+    // Add CSS for tooltips
+    const tooltipStyle = document.createElement('style');
+    tooltipStyle.textContent = `
+        .tooltip {
+            position: fixed;
+            background: var(--secondary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            z-index: 10000;
+            pointer-events: none;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: var(--secondary) transparent transparent transparent;
+        }
+    `;
+    document.head.appendChild(tooltipStyle);
+    
+    // Lazy loading images
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.getAttribute('data-src');
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        lazyImages.forEach(img => imageObserver.observe(img));
+    }
 });
