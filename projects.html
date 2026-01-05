@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Projects | B-win Company Ltd | Completed & Ongoing Works</title>
+    <meta name="description" content="View our portfolio of completed and ongoing construction projects in South Sudan: Residential homes, commercial buildings, civil engineering works, and property development.">
+    <meta name="keywords" content="construction projects South Sudan, building portfolio Juba, completed projects, ongoing construction, residential projects, commercial buildings, civil engineering works">
+    <meta name="author" content="B-win Construction & General Supply Company Ltd">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://bwinconstruction.com/projects">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-building"></i>B-win<span>Construction</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li class="has-dropdown">
+                        <a href="services.html" class="nav-link"><i class="fas fa-cogs"></i> Services <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <ul class="dropdown" id="servicesDropdown">
+                            <li><a href="services.html#building"><i class="fas fa-home"></i> Building Construction</a></li>
+                            <li><a href="services.html#design"><i class="fas fa-drafting-compass"></i> Architectural Design</a></li>
+                            <li><a href="services.html#engineering"><i class="fas fa-hard-hat"></i> Civil Engineering</a></li>
+                            <li><a href="services.html#development"><i class="fas fa-city"></i> Property Development</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html" class="nav-link active"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="why-choose-us.html" class="nav-link"><i class="fas fa-star"></i> Why Choose Us</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Projects Hero -->
+    <section class="projects-hero">
+        <h1>Our Construction Projects</h1>
+    </section>
+
+    <!-- Projects Filter -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Project Portfolio</h2>
+            <p class="section-subtitle fade-in">Explore our diverse portfolio of completed and ongoing construction projects across South Sudan</p>
+            
+            <div class="projects-filter fade-in">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+                <button class="filter-btn" data-filter="ongoing">Ongoing Projects</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card fade-in" data-category="residential">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Residential Housing Project Juba South Sudan">
+                        <div class="project-category">Residential</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Modern Family Homes - Juba</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Juba, South Sudan
+                            </div>
+                            <div class="project-status completed">Completed</div>
+                        </div>
+                        <p>A collection of 12 modern family homes designed for comfort and sustainability, featuring 3-4 bedrooms each with contemporary finishes.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Housing</span>
+                            <span class="project-tag">Family Homes</span>
+                            <span class="project-tag">Modern Design</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card fade-in" data-category="commercial">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Commercial Office Building Construction South Sudan">
+                        <div class="project-category">Commercial</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Juba Business Center</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Juba City Center
+                            </div>
+                            <div class="project-status completed">Completed</div>
+                        </div>
+                        <p>A 4-story commercial building housing office spaces, retail outlets, and conference facilities in the heart of Juba's business district.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Office Building</span>
+                            <span class="project-tag">Commercial</span>
+                            <span class="project-tag">Retail Spaces</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card fade-in" data-category="infrastructure">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Road Construction Project South Sudan">
+                        <div class="project-category">Infrastructure</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Urban Road Network Upgrade</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Juba Urban Area
+                            </div>
+                            <div class="project-status completed">Completed</div>
+                        </div>
+                        <p>Upgrading 8km of urban roads with proper drainage, street lighting, and pedestrian walkways to improve city infrastructure.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Road Construction</span>
+                            <span class="project-tag">Infrastructure</span>
+                            <span class="project-tag">Drainage Systems</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card fade-in" data-category="residential" data-category="ongoing">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Real Estate Development Project South Sudan">
+                        <div class="project-category">Residential</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Green Valley Housing Estate</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Gumbo, South Sudan
+                            </div>
+                            <div class="project-status ongoing">Ongoing</div>
+                        </div>
+                        <p>A sustainable housing development comprising 50 residential units with green spaces, community facilities, and modern amenities.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Housing Estate</span>
+                            <span class="project-tag">Sustainable</span>
+                            <span class="project-tag">Community Development</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card fade-in" data-category="commercial" data-category="ongoing">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Shopping Mall Construction Project South Sudan">
+                        <div class="project-category">Commercial</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Juba Modern Mall</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Juba, South Sudan
+                            </div>
+                            <div class="project-status ongoing">Ongoing</div>
+                        </div>
+                        <p>A state-of-the-art shopping mall with 50 retail spaces, food court, entertainment zone, and ample parking facilities.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Shopping Mall</span>
+                            <span class="project-tag">Commercial</span>
+                            <span class="project-tag">Retail</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card fade-in" data-category="infrastructure">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Water Supply System Project South Sudan">
+                        <div class="project-category">Infrastructure</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Community Water Supply System</h3>
+                        <div class="project-meta">
+                            <div class="project-location">
+                                <i class="fas fa-map-marker-alt"></i> Rural South Sudan
+                            </div>
+                            <div class="project-status completed">Completed</div>
+                        </div>
+                        <p>Design and construction of a community water supply system including boreholes, storage tanks, and distribution network.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Water Supply</span>
+                            <span class="project-tag">Community Project</span>
+                            <span class="project-tag">Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Stats -->
+    <section class="cta-section section-bg-light">
+        <div class="container">
+            <div class="about-home-stats">
+                <div class="about-stat-item fade-in">
+                    <div class="about-stat-number">50+</div>
+                    <div class="about-stat-label">Projects Completed</div>
+                </div>
+                <div class="about-stat-item fade-in">
+                    <div class="about-stat-number">25</div>
+                    <div class="about-stat-label">Ongoing Projects</div>
+                </div>
+                <div class="about-stat-item fade-in">
+                    <div class="about-stat-number">15</div>
+                    <div class="about-stat-label">Happy Clients</div>
+                </div>
+                <div class="about-stat-item fade-in">
+                    <div class="about-stat-number">10</div>
+                    <div class="about-stat-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2>Have a Construction Project in Mind?</h2>
+                <p>Let's discuss how we can bring your vision to life with our expertise in construction and civil engineering.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-cta"><i class="fas fa-lightbulb"></i> Discuss Your Project</a>
+                    <a href="tel:+211926960986" class="btn btn-cta-outline">
+                        <i class="fas fa-phone"></i> Call for Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">B-win<span>Construction</span></div>
+                    <p>Designing and building quality structures across South Sudan. From homes to commercial buildings — we deliver trusted results with professional standards.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="why-choose-us.html"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#building"><i class="fas fa-chevron-right"></i> Building Construction</a></li>
+                        <li><a href="services.html#design"><i class="fas fa-chevron-right"></i> Architectural Design</a></li>
+                        <li><a href="services.html#engineering"><i class="fas fa-chevron-right"></i> Civil Engineering Works</a></li>
+                        <li><a href="services.html#development"><i class="fas fa-chevron-right"></i> Property Development</a></li>
+                        <li><a href="services.html#consultancy"><i class="fas fa-chevron-right"></i> Construction Consultancy</a></li>
+                        <li><a href="services.html#renovation"><i class="fas fa-chevron-right"></i> Renovation & Remodeling</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links footer-contact">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul>
+                        <li><a href="tel:+211926960986"><i class="fas fa-phone"></i> +211 926 960 986</a></li>
+                        <li><a href="mailto:info@bwinconstruction.com"><i class="fas fa-envelope"></i> info@bwinconstruction.com</a></li>
+                        <li><a href="https://maps.google.com/?q=Juba,South+Sudan" target="_blank"><i class="fas fa-map-marker-alt"></i> Juba, South Sudan</a></li>
+                        <li><a href="https://wa.me/211926960986" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp: +211 926 960 986</a></li>
+                        <li><i class="fas fa-clock"></i> Mon - Sat: 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 B-win Construction & General Supply Company Ltd. All rights reserved. | Juba, South Sudan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
