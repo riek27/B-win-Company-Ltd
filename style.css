@@ -2,24 +2,17 @@
    CSS Variables & Reset
 ========================================= */
 :root {
-    --primary: #D4AF37;
-    --primary-dark: #B8860B;
-    --secondary: #1a365d;
-    --secondary-light: #2d4a7a;
-    --light: #f8f9fa;
-    --dark: #333;
-    --gray: #6c757d;
-    --light-gray: #e9ecef;
+    --primary: #007bff;
+    --primary-dark: #0056b3;
+    --secondary: #222;
+    --light: #f9f9f9;
     --white: #fff;
-    --black: #000;
-    --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.15);
-    --border-radius: 10px;
+    --gray: #555;
+    --gold: #ffd700;
     --transition: all 0.3s ease;
-    --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    --gradient-secondary: linear-gradient(135deg, var(--secondary), var(--secondary-light));
-}
-
+    --shadow: 0 4px 6px rgba(0,0,0,0.05);
+    --shadow-hover: 0 10px 25px rgba(0,0,0,0.1);
+    --border-radius: 10px;
 * {
     margin: 0;
     padding: 0;
