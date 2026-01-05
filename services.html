@@ -3,113 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Advent Agency</title>
+    <title>Construction Services | B-win Company Ltd | Building, Engineering & Design</title>
+    <meta name="description" content="Comprehensive construction services in South Sudan: Building construction, architectural design, civil engineering works, property development, and construction consultancy.">
+    <meta name="keywords" content="construction services South Sudan, building contractors Juba, architectural design services, civil engineering contractors, property development South Sudan, construction consultancy Juba, renovation services">
+    <meta name="author" content="B-win Construction & General Supply Company Ltd">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://bwinconstruction.com/services">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
+
+    <!-- Header -->
+    <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">Advent<span>.</span></a>
+            <a href="index.html" class="logo"><i class="fas fa-building"></i>B-win<span>Construction</span></a>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="services.html" class="nav-link active">Services</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="contact.html" class="btn btn-nav">Start Project</a></li>
-            </ul>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li class="has-dropdown">
+                        <a href="services.html" class="nav-link active"><i class="fas fa-cogs"></i> Services <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <ul class="dropdown" id="servicesDropdown">
+                            <li><a href="#building"><i class="fas fa-home"></i> Building Construction</a></li>
+                            <li><a href="#design"><i class="fas fa-drafting-compass"></i> Architectural Design</a></li>
+                            <li><a href="#engineering"><i class="fas fa-hard-hat"></i> Civil Engineering</a></li>
+                            <li><a href="#development"><i class="fas fa-city"></i> Property Development</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="why-choose-us.html" class="nav-link"><i class="fas fa-star"></i> Why Choose Us</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
 
     <!-- Services Hero -->
-    <section class="page-hero services-hero">
-        <div class="container">
-            <div class="page-hero-content">
-                <h1>Our Services</h1>
-                <p>Comprehensive digital solutions for luxury home builders</p>
-            </div>
-        </div>
+    <section class="services-hero">
+        <h1>Our Construction Services</h1>
     </section>
-    
-    <!-- Services Section -->
-    <section class="services-section">
+
+    <!-- Services Details -->
+    <section class="services-details-section">
         <div class="container">
-            <h2 class="section-title">What We Offer</h2>
-            <p class="section-subtitle">We provide specialized digital services designed specifically for custom home builders and luxury construction companies.</p>
+            <h2 class="section-title fade-in">Comprehensive Construction Solutions</h2>
+            <p class="section-subtitle fade-in">We provide end-to-end construction services for residential, commercial, and infrastructure projects across South Sudan</p>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" alt="Luxury Web Design">
+            <div class="services-details-grid">
+                <!-- Building Construction -->
+                <div class="service-detail-card fade-in" id="building">
+                    <div class="service-detail-header">
+                        <i class="fas fa-home"></i>
+                        <h3>Building Construction</h3>
                     </div>
-                    <div class="service-content">
-                        <h3>Luxury Web Design</h3>
-                        <p>Bespoke website designs that reflect the quality and sophistication of your luxury homes. We create immersive digital experiences that captivate potential clients.</p>
+                    <div class="service-detail-content">
+                        <p>Complete construction services for residential and commercial buildings, from initial site preparation to final finishing touches.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Custom design tailored to your brand</li>
-                            <li><i class="fas fa-check"></i> Mobile-optimized responsive layouts</li>
-                            <li><i class="fas fa-check"></i> Portfolio and project showcases</li>
-                            <li><i class="fas fa-check"></i> Virtual tours and 3D walkthroughs</li>
+                            <li><i class="fas fa-check"></i> Residential homes and apartments</li>
+                            <li><i class="fas fa-check"></i> Commercial office buildings</li>
+                            <li><i class="fas fa-check"></i> Retail spaces and shopping centers</li>
+                            <li><i class="fas fa-check"></i> Institutional buildings (schools, hospitals)</li>
+                            <li><i class="fas fa-check"></i> Industrial facilities and warehouses</li>
                         </ul>
-                        <a href="contact.html" class="service-link">Start Project <i class="fas fa-arrow-right"></i></a>
+                        <div class="text-center" style="margin-top: 30px;">
+                            <a href="contact.html" class="btn"><i class="fas fa-phone-alt"></i> Request Service</a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Brand Development">
+                <!-- Architectural Design -->
+                <div class="service-detail-card fade-in" id="design">
+                    <div class="service-detail-header">
+                        <i class="fas fa-drafting-compass"></i>
+                        <h3>Architectural Design</h3>
                     </div>
-                    <div class="service-content">
-                        <h3>Brand Development</h3>
-                        <p>Comprehensive branding solutions that establish your company as a leader in the luxury home building market. From logos to complete brand guidelines.</p>
+                    <div class="service-detail-content">
+                        <p>Creative and functional architectural designs that blend aesthetics with practicality, tailored to client needs and local regulations.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Logo and visual identity design</li>
-                            <li><i class="fas fa-check"></i> Brand messaging and positioning</li>
-                            <li><i class="fas fa-check"></i> Marketing collateral design</li>
-                            <li><i class="fas fa-check"></i> Brand strategy and guidelines</li>
+                            <li><i class="fas fa-check"></i> Building design and planning</li>
+                            <li><i class="fas fa-check"></i> Interior design and space planning</li>
+                            <li><i class="fas fa-check"></i> 3D modeling and visualization</li>
+                            <li><i class="fas fa-check"></i> Construction documentation</li>
+                            <li><i class="fas fa-check"></i> Building permit applications</li>
                         </ul>
-                        <a href="contact.html" class="service-link">Start Project <i class="fas fa-arrow-right"></i></a>
+                        <div class="text-center" style="margin-top: 30px;">
+                            <a href="contact.html" class="btn"><i class="fas fa-phone-alt"></i> Request Service</a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80" alt="Digital Marketing">
+                <!-- Civil Engineering -->
+                <div class="service-detail-card fade-in" id="engineering">
+                    <div class="service-detail-header">
+                        <i class="fas fa-hard-hat"></i>
+                        <h3>Civil Engineering Works</h3>
                     </div>
-                    <div class="service-content">
-                        <h3>Digital Marketing</h3>
-                        <p>Targeted digital marketing strategies designed to reach high-net-worth individuals interested in custom luxury homes and exclusive developments.</p>
+                    <div class="service-detail-content">
+                        <p>Professional civil engineering solutions for infrastructure development, site works, and structural engineering services.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> SEO for luxury home builders</li>
-                            <li><i class="fas fa-check"></i> Social media marketing</li>
-                            <li><i class="fas fa-check"></i> Email marketing campaigns</li>
-                            <li><i class="fas fa-check"></i> Paid advertising management</li>
+                            <li><i class="fas fa-check"></i> Site investigation and preparation</li>
+                            <li><i class="fas fa-check"></i> Road and pavement construction</li>
+                            <li><i class="fas fa-check"></i> Drainage and sewerage systems</li>
+                            <li><i class="fas fa-check"></i> Water supply systems</li>
+                            <li><i class="fas fa-check"></i> Structural design and analysis</li>
                         </ul>
-                        <a href="contact.html" class="service-link">Start Project <i class="fas fa-arrow-right"></i></a>
+                        <div class="text-center" style="margin-top: 30px;">
+                            <a href="contact.html" class="btn"><i class="fas fa-phone-alt"></i> Request Service</a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Content Creation">
+                <!-- Property Development -->
+                <div class="service-detail-card fade-in" id="development">
+                    <div class="service-detail-header">
+                        <i class="fas fa-city"></i>
+                        <h3>Property Development</h3>
                     </div>
-                    <div class="service-content">
-                        <h3>Content Creation</h3>
-                        <p>Premium photography, videography, and copywriting services that showcase your luxury properties in their best light and tell compelling stories.</p>
+                    <div class="service-detail-content">
+                        <p>End-to-end property development services from land acquisition to project completion and management.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Professional property photography</li>
-                            <li><i class="fas fa-check"></i> Drone footage and video tours</li>
-                            <li><i class="fas fa-check"></i> Compelling project descriptions</li>
-                            <li><i class="fas fa-check"></i> Blog content and articles</li>
+                            <li><i class="fas fa-check"></i> Land acquisition and feasibility studies</li>
+                            <li><i class="fas fa-check"></i> Master planning and zoning</li>
+                            <li><i class="fas fa-check"></i> Real estate development</li>
+                            <li><i class="fas fa-check"></i> Property management services</li>
+                            <li><i class="fas fa-check"></i> Investment consulting</li>
                         </ul>
-                        <a href="contact.html" class="service-link">Start Project <i class="fas fa-arrow-right"></i></a>
+                        <div class="text-center" style="margin-top: 30px;">
+                            <a href="contact.html" class="btn"><i class="fas fa-phone-alt"></i> Request Service</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Construction Consultancy -->
+                <div class="service-detail-card fade-in" id="consultancy">
+                    <div class="service-detail-header">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>Construction Consultancy</h3>
+                    </div>
+                    <div class="service-detail-content">
+                        <p>Expert construction consultancy services to guide your project from conception to completion.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Project management and supervision</li>
+                            <li><i class="fas fa-check"></i> Cost estimation and budgeting</li>
+                            <li><i class="fas fa-check"></i> Quality control and assurance</li>
+                            <li><i class="fas fa-check"></i> Contract administration</li>
+                            <li><i class="fas fa-check"></i> Construction audits and assessments</li>
+                        </ul>
+                        <div class="text-center" style="margin-top: 30px;">
+                            <a href="contact.html" class="btn"><i class="fas fa-phone-alt"></i> Request Service</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Renovation & Remodeling -->
+                <div class="service-detail-card fade-in" id="renovation">
+                    <div class="service-detail-header">
+                        <i class="fas fa-paint-roller"></i>
+                        <h3>Renovation & Remodeling</h3>
+                    </div>
+                    <div class="service-detail-content">
+                        <p>Transform existing spaces with our professional renovation and remodeling services for homes and businesses.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Home renovation and extensions</li>
+                            <li><i class="fas fa-check"></i> Commercial space remodeling</li>
+                            <li><i class="fas fa-check"></i> Interior and exterior finishing</li>
+                            <li><i class="fas fa-check"></i> Structural repairs and upgrades</li>
+                            <li><i class="fas fa-check"></i> Modernization of existing buildings</li>
+                        </ul>
+                        <div class="text-center" style="margin-top: 30px;">
+                            <a href="contact.html" class="btn"><i class="fas fa-phone-alt"></i> Request Service</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -117,29 +189,50 @@
     </section>
 
     <!-- Process Section -->
-    <section class="process-section">
+    <section class="service-process section-bg-light">
         <div class="container">
-            <h2 class="section-title">Our Process</h2>
+            <h2 class="section-title fade-in">Our Construction Process</h2>
+            <p class="section-subtitle fade-in">A systematic approach ensuring quality, safety, and timely delivery of every project</p>
+            
             <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <h3>Discovery</h3>
-                    <p>We immerse ourselves in your brand, understanding your unique value proposition and target audience.</p>
+                <div class="process-step fade-in">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Consultation & Planning</h3>
+                        <p>We begin by understanding your needs, conducting site assessments, and developing detailed project plans.</p>
+                    </div>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">02</div>
-                    <h3>Strategy</h3>
-                    <p>We develop a comprehensive digital strategy tailored to your business goals and market position.</p>
+                
+                <div class="process-step fade-in">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Design & Engineering</h3>
+                        <p>Our architects and engineers create designs that balance aesthetics, functionality, and structural integrity.</p>
+                    </div>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">03</div>
-                    <h3>Design</h3>
-                    <p>Our creative team crafts visually stunning designs that reflect the quality of your luxury homes.</p>
+                
+                <div class="process-step fade-in">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Construction Execution</h3>
+                        <p>Skilled craftsmen execute the construction with precision, adhering to timelines and quality standards.</p>
+                    </div>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">04</div>
-                    <h3>Development</h3>
-                    <p>We build your website with cutting-edge technology, ensuring optimal performance and user experience.</p>
+                
+                <div class="process-step fade-in">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Quality Assurance</h3>
+                        <p>Rigorous quality checks at every stage ensure the final product meets our high standards and client expectations.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step fade-in">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Project Delivery</h3>
+                        <p>We hand over the completed project with all documentation and provide after-construction support.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -148,10 +241,15 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Elevate Your Digital Presence?</h2>
-                <p>Let's discuss how we can help showcase your luxury homes to the right audience.</p>
-                <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+            <div class="cta-content fade-in">
+                <h2>Ready to Start Your Construction Project?</h2>
+                <p>Contact us today for a free consultation and detailed quote for your construction needs in South Sudan.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-cta"><i class="fas fa-calendar-alt"></i> Get Free Consultation</a>
+                    <a href="tel:+211926960986" class="btn btn-cta-outline">
+                        <i class="fas fa-phone"></i> Call Now: +211 926 960 986
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -159,54 +257,60 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-container">
+            <div class="footer-content">
                 <div class="footer-about">
-                    <div class="footer-logo">Advent<span>.</span></div>
-                    <p>We craft premium digital experiences exclusively for luxury home builders and custom construction companies.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <div class="footer-logo">B-win<span>Construction</span></div>
+                    <p>Designing and building quality structures across South Sudan. From homes to commercial buildings — we deliver trusted results with professional standards.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                
-                <div class="footer-links-container">
-                    <h3 class="footer-heading">Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="services.html">Luxury Web Design</a></li>
-                        <li><a href="services.html">Brand Development</a></li>
-                        <li><a href="services.html">Digital Marketing</a></li>
-                        <li><a href="services.html">Content Creation</a></li>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="why-choose-us.html"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-links-container">
-                    <h3 class="footer-heading">Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Careers</a></li>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#building"><i class="fas fa-chevron-right"></i> Building Construction</a></li>
+                        <li><a href="services.html#design"><i class="fas fa-chevron-right"></i> Architectural Design</a></li>
+                        <li><a href="services.html#engineering"><i class="fas fa-chevron-right"></i> Civil Engineering Works</a></li>
+                        <li><a href="services.html#development"><i class="fas fa-chevron-right"></i> Property Development</a></li>
+                        <li><a href="services.html#consultancy"><i class="fas fa-chevron-right"></i> Construction Consultancy</a></li>
+                        <li><a href="services.html#renovation"><i class="fas fa-chevron-right"></i> Renovation & Remodeling</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-links-container">
-                    <h3 class="footer-heading">Resources</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Case Studies</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                <div class="footer-links footer-contact">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul>
+                        <li><a href="tel:+211926960986"><i class="fas fa-phone"></i> +211 926 960 986</a></li>
+                        <li><a href="mailto:info@bwinconstruction.com"><i class="fas fa-envelope"></i> info@bwinconstruction.com</a></li>
+                        <li><a href="https://maps.google.com/?q=Juba,South+Sudan" target="_blank"><i class="fas fa-map-marker-alt"></i> Juba, South Sudan</a></li>
+                        <li><a href="https://wa.me/211926960986" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp: +211 926 960 986</a></li>
+                        <li><i class="fas fa-clock"></i> Mon - Sat: 8:00 AM - 6:00 PM</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Advent Agency. All rights reserved.</p>
+            <div class="copyright">
+                <p>© 2026 B-win Construction & General Supply Company Ltd. All rights reserved. | Juba, South Sudan</p>
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>
