@@ -372,7 +372,7 @@ header.scrolled {
    Hero Section
 ========================================= */
 .hero {
-    background: var(--gradient-secondary), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+    background: var(--gradient-secondary), url('assets/homes.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -792,7 +792,7 @@ section {
 
 /* CTA Section */
 .cta-section {
-    background: var(--gradient-secondary), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+    background: var(--gradient-secondary), url('assets/adven.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
